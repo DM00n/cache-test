@@ -55,7 +55,7 @@ void Cache::experiment_d(int num) {
         fill_direct();
     }
     auto t2 = Clock::now();
-    make_report("\"direct\"", num,std::chrono::duration_cast
+    make_report("\"direct\"", num, std::chrono::duration_cast
                     <std::chrono::nanoseconds>(t2 - t1).count());
 }
 
