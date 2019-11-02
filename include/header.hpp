@@ -10,10 +10,12 @@
 #include <algorithm>
 #include <random>
 #include <fstream>
+#include <vector>
+#include <string>
 
 class Cache {
 public:
-    Cache(unsigned buf);
+    explicit Cache(unsigned buf);
 
     void warm();
 

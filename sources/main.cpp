@@ -1,3 +1,4 @@
+// Copyright 2019 DM00n <teamvortex@yandex.ru>
 #include <iostream>
 #include "header.hpp"
 
@@ -40,10 +41,7 @@ void research_rand(unsigned arr[]) {
 int main() {
     unsigned exp[] = {e0, e1, e2, e3, e4, e5, e6, e7};
     research_d(exp);
-    std::cout << "report done" << std::endl;
     research_rev(exp);
-    std::cout << "report done" << std::endl;
     research_rand(exp);
-    std::cout << "report done";
     return 0;
 }
