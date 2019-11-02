@@ -55,8 +55,8 @@ void Cache::experiment_d(int num) {
         fill_direct();
     }
     auto t2 = Clock::now();
-    make_report("\"direct\"", num,
-            std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count());
+    make_report("\"direct\"", num,std::chrono::duration_cast
+                    <std::chrono::nanoseconds>(t2 - t1).count());
 }
 
 void Cache::experiment_rev(int num) {
@@ -65,8 +65,8 @@ void Cache::experiment_rev(int num) {
         fill_reverse();
     }
     auto t2 = Clock::now();
-    make_report("\"reverse\"", num,
-            std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count());
+    make_report("\"reverse\"", num, std::chrono::duration_cast
+            <std::chrono::nanoseconds>(t2 - t1).count());
 }
 
 void Cache::experiment_rand(int num) {
@@ -81,8 +81,8 @@ void Cache::experiment_rand(int num) {
         fill_random(pos_vec);
     }
     auto t2 = Clock::now();
-    make_report("\"random\"", num,
-            std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count());
+    make_report("\"random\"", num, std::chrono::duration_cast
+            <std::chrono::nanoseconds>(t2 - t1).count());
 }
 
 void Cache::make_report(const std::string &dir, int num, int dur) {
@@ -124,8 +124,8 @@ void Cache::make_report(const std::string &dir, int num, int dur) {
             break;
         }
     }
-    if (num == 0) OMEGASTRING = str1 + dir + exps
-                              + expt1 + number + expt2 + buf_size + expt3 + duration;
+    if (num == 0) OMEGASTRING = str1 + dir + exps + expt1
+            + number + expt2 + buf_size + expt3 + duration;
     else
         OMEGASTRING = expt1 + number + expt2 + buf_size + expt3 + duration;
     std::ofstream out;
