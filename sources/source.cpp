@@ -56,7 +56,7 @@ void Cache::experiment_d(int num) {
     }
     auto t2 = Clock::now();
     make_report("\"direct\"", num, std::chrono::duration_cast
-                    <std::chrono::nanoseconds>(t2 - t1).count());
+                    <std::chrono::seconds>(t2 - t1).count());
 }
 
 void Cache::experiment_rev(int num) {
@@ -66,7 +66,7 @@ void Cache::experiment_rev(int num) {
     }
     auto t2 = Clock::now();
     make_report("\"reverse\"", num, std::chrono::duration_cast
-            <std::chrono::nanoseconds>(t2 - t1).count());
+            <std::chrono::seconds>(t2 - t1).count());
 }
 
 void Cache::experiment_rand(int num) {
@@ -82,7 +82,7 @@ void Cache::experiment_rand(int num) {
     }
     auto t2 = Clock::now();
     make_report("\"random\"", num, std::chrono::duration_cast
-            <std::chrono::nanoseconds>(t2 - t1).count());
+            <std::chrono::seconds>(t2 - t1).count());
 }
 
 void Cache::make_report(const std::string &dir, int num, int dur) {
