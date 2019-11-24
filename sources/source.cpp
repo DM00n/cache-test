@@ -95,7 +95,7 @@ void Cache::make_report(const std::string &dir, int num, int dur) {
     expt2 = "\n\t\tinput_data:\n\t\t\tbuffer_size: ";
     expt3 = "\n\t\tresults:\n\t\t\tduration: ";
     number = std::to_string(num + 1);
-    duration = "\"" + std::to_string(dur) + "ns\"\n\n";
+    duration = "\"" + std::to_string(dur) + "s\"\n\n";
     int size_of_arr = _length * sizeof(int);
     int measure = 0;
     while (size_of_arr >= 1024) {
