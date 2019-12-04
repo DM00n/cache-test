@@ -14,11 +14,11 @@
 
 std::map<int, int> number_of_experiments() {
     std::map<int, int> experiments;
-    int count=0, n = -2;
+    int count = 0, n = -2;
     experiments[count] = l1 / 2;
     count++;
     while (pow(2, n) * 1024*1024 < (3 * max / 2)) {
-        experiments[count] = pow(2, n ) * 1024*1024;
+        experiments[count] = pow(2, n) * 1024*1024;
         count++;
         n++;
     }
@@ -54,7 +54,7 @@ void research_rand(unsigned arr[]) {
 }
 
 int main() {
-    std::map check_cache=number_of_experiments();
+    std::map check_cache = number_of_experiments();
     unsigned exp[] = {l0, l1, l2, l3, l4, l5, l6, l7};
     research_d(exp);
     research_rev(exp);
