@@ -1,0 +1,5 @@
+C:/BMSTU/programms/cache-test/cache-test/cmake-build-debug/CMakeFiles/template.dir
+C:/BMSTU/programms/cache-test/cache-test/cmake-build-debug/CMakeFiles/tests.dir
+C:/BMSTU/programms/cache-test/cache-test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/BMSTU/programms/cache-test/cache-test/cmake-build-debug/CMakeFiles/test.dir
+C:/BMSTU/programms/cache-test/cache-test/cmake-build-debug/CMakeFiles/edit_cache.dir
