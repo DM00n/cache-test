@@ -43,7 +43,7 @@ void Cache::fill_random(std::vector<int> pos_vec){
     std::random_device rd;
     std::mt19937 mersenne(rd());
     for (unsigned i = 0; i < pos_vec.size(); ++i) {
-        _array[pos_vec[i]]=mersenne() % 100 + 1;
+        _array[pos_vec[i]] = mersenne() % 100 + 1;
     }
 }
 
