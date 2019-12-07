@@ -10,8 +10,8 @@
 #define l5 4194304
 #define l6 8388608
 #define l7 9437184
-#define max 6*1024*1024
-
+//#define max 6*1024*1024
+/*
 std::map<int, int> number_of_experiments() {
     std::map<int, int> experiments;
     int count = 0, n = -2;
@@ -25,7 +25,7 @@ std::map<int, int> number_of_experiments() {
     //++n;
     experiments[count] = 3 * max / 2;
     return experiments;
-}
+}*/
 void research_d(unsigned arr[]) {
     int size = sizeof(arr);
     for (unsigned i = 0; i < size; ++i) {
@@ -54,7 +54,6 @@ void research_rand(unsigned arr[]) {
 }
 
 int main() {
-    std::map check_cache = number_of_experiments();
     unsigned exp[] = {l0, l1, l2, l3, l4, l5, l6, l7};
     research_d(exp);
     research_rev(exp);

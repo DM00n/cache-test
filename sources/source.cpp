@@ -1,7 +1,7 @@
 // Copyright 2019 DM00n <teamvortex@yandex.ru>
 
-#include <header.hpp>
-
+#include "header.hpp"
+#define path_to_result_file ""
 typedef std::chrono::high_resolution_clock Clock;
 
 Cache::Cache(unsigned buf) {
@@ -39,34 +39,32 @@ void Cache::fill_reverse() {
     }
 }
 
-void Cache::fill_random(std::vector<int> pos_vec) {
-    while (!pos_vec.empty()) {
-        std::random_device rd;
-        std::mt19937 mersenne(rd());
-        int pos = pos_vec[pos_vec.size() - 1];
-        _array[pos] = mersenne() % 100 + 1;
-        pos_vec.pop_back();
+void Cache::fill_random(std::vector<int> pos_vec){
+    std::random_device rd;
+    std::mt19937 mersenne(rd());
+    for (unsigned i = 0; i < pos_vec.size(); ++i) {
+        _array[pos_vec[i]]=mersenne() % 100 + 1;
     }
 }
 
 void Cache::experiment_d(int num) {
     auto t1 = Clock::now();
-    for (unsigned j = 0; j < 10; j++) {
+    for (unsigned j = 0; j < 1000; j++) {
         fill_direct();
     }
     auto t2 = Clock::now();
     make_report("\"direct\"", num, std::chrono::duration_cast
-                    <std::chrono::nanoseconds>(t2 - t1).count());
+            <std::chrono::milliseconds>(t2 - t1).count());
 }
 
 void Cache::experiment_rev(int num) {
     auto t1 = Clock::now();
-    for (unsigned j = 0; j < 10; j++) {
+    for (unsigned j = 0; j < 1000; j++) {
         fill_reverse();
     }
     auto t2 = Clock::now();
     make_report("\"reverse\"", num, std::chrono::duration_cast
-            <std::chrono::nanoseconds>(t2 - t1).count());
+            <std::chrono::milliseconds>(t2 - t1).count());
 }
 
 void Cache::experiment_rand(int num) {
@@ -77,17 +75,17 @@ void Cache::experiment_rand(int num) {
     std::random_device rd;
     std::shuffle(std::begin(pos_vec), std::end(pos_vec), rd);
     auto t1 = Clock::now();
-    for (unsigned j = 0; j < 10; j++) {
+    for (unsigned j = 0; j < 1000; j++) {
         fill_random(pos_vec);
     }
     auto t2 = Clock::now();
     make_report("\"random\"", num, std::chrono::duration_cast
-            <std::chrono::seconds>(t2 - t1).count());
+            <std::chrono::milliseconds>(t2 - t1).count());
 }
 
 void Cache::make_report(const std::string &dir, int num, int dur) {
     std::string str1, exps, expt1, expt2,
-                expt3, duration, buf_size, number, OMEGASTRING;
+            expt3, duration, buf_size, number, OMEGASTRING;
     str1 = "investigation:\n"
            "\ttravel_variant: ";
     exps = "\nexperiments:\n";
@@ -95,7 +93,7 @@ void Cache::make_report(const std::string &dir, int num, int dur) {
     expt2 = "\n\t\tinput_data:\n\t\t\tbuffer_size: ";
     expt3 = "\n\t\tresults:\n\t\t\tduration: ";
     number = std::to_string(num + 1);
-    duration = "\"" + std::to_string(dur) + "s\"\n\n";
+    duration = "\"" + std::to_string(dur) + "ms\"\n\n";
     int size_of_arr = _length * sizeof(int);
     int measure = 0;
     while (size_of_arr >= 1024) {
@@ -125,11 +123,11 @@ void Cache::make_report(const std::string &dir, int num, int dur) {
         }
     }
     if (num == 0) OMEGASTRING = str1 + dir + exps + expt1
-            + number + expt2 + buf_size + expt3 + duration;
+                                + number + expt2 + buf_size + expt3 + duration;
     else
         OMEGASTRING = expt1 + number + expt2 + buf_size + expt3 + duration;
     std::ofstream out;
-    out.open(R"(C:\BMSTU\programms\cache-test\cache-test\cache_result.txt)", std::ios::app);
+    out.open(path_to_result_file, std::ios::app);
     if (!out) std::cout << "error opening file";
     else
         out << OMEGASTRING;

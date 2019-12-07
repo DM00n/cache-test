@@ -1,0 +1,177 @@
+investigation:
+	travel_variant: "direct"
+experiments:
+	- experiment:
+		number: 1
+		input_data:
+			buffer_size: "128Kb"
+		results:
+			duration: "593ms"
+
+	- experiment:
+		number: 2
+		input_data:
+			buffer_size: "256Kb"
+		results:
+			duration: "1206ms"
+
+	- experiment:
+		number: 3
+		input_data:
+			buffer_size: "512Kb"
+		results:
+			duration: "2367ms"
+
+	- experiment:
+		number: 4
+		input_data:
+			buffer_size: "1Mb"
+		results:
+			duration: "4855ms"
+
+	- experiment:
+		number: 5
+		input_data:
+			buffer_size: "2Mb"
+		results:
+			duration: "9582ms"
+
+	- experiment:
+		number: 6
+		input_data:
+			buffer_size: "4Mb"
+		results:
+			duration: "18757ms"
+
+	- experiment:
+		number: 7
+		input_data:
+			buffer_size: "8Mb"
+		results:
+			duration: "37016ms"
+
+	- experiment:
+		number: 8
+		input_data:
+			buffer_size: "9Mb"
+		results:
+			duration: "42486ms"
+
+investigation:
+	travel_variant: "reverse"
+experiments:
+	- experiment:
+		number: 1
+		input_data:
+			buffer_size: "128Kb"
+		results:
+			duration: "610ms"
+
+	- experiment:
+		number: 2
+		input_data:
+			buffer_size: "256Kb"
+		results:
+			duration: "1210ms"
+
+	- experiment:
+		number: 3
+		input_data:
+			buffer_size: "512Kb"
+		results:
+			duration: "2340ms"
+
+	- experiment:
+		number: 4
+		input_data:
+			buffer_size: "1Mb"
+		results:
+			duration: "4882ms"
+
+	- experiment:
+		number: 5
+		input_data:
+			buffer_size: "2Mb"
+		results:
+			duration: "9903ms"
+
+	- experiment:
+		number: 6
+		input_data:
+			buffer_size: "4Mb"
+		results:
+			duration: "19659ms"
+
+	- experiment:
+		number: 7
+		input_data:
+			buffer_size: "8Mb"
+		results:
+			duration: "38050ms"
+
+	- experiment:
+		number: 8
+		input_data:
+			buffer_size: "9Mb"
+		results:
+			duration: "42949ms"
+
+investigation:
+	travel_variant: "random"
+experiments:
+	- experiment:
+		number: 1
+		input_data:
+			buffer_size: "128Kb"
+		results:
+			duration: "759ms"
+
+	- experiment:
+		number: 2
+		input_data:
+			buffer_size: "256Kb"
+		results:
+			duration: "1407ms"
+
+	- experiment:
+		number: 3
+		input_data:
+			buffer_size: "512Kb"
+		results:
+			duration: "2902ms"
+
+	- experiment:
+		number: 4
+		input_data:
+			buffer_size: "1Mb"
+		results:
+			duration: "6364ms"
+
+	- experiment:
+		number: 5
+		input_data:
+			buffer_size: "2Mb"
+		results:
+			duration: "12870ms"
+
+	- experiment:
+		number: 6
+		input_data:
+			buffer_size: "4Mb"
+		results:
+			duration: "26445ms"
+
+	- experiment:
+		number: 7
+		input_data:
+			buffer_size: "8Mb"
+		results:
+			duration: "53887ms"
+
+	- experiment:
+		number: 8
+		input_data:
+			buffer_size: "9Mb"
+		results:
+			duration: "62062ms"
+
