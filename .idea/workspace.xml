@@ -12,12 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ef704a8-2b8d-472e-9bb3-4274c8118fa9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cache_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/source.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="5ef704a8-2b8d-472e-9bb3-4274c8118fa9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,7 @@
       <workItem from="1575361954047" duration="847000" />
       <workItem from="1575473065553" duration="360000" />
       <workItem from="1575473700541" duration="1035000" />
-      <workItem from="1575734350056" duration="292000" />
+      <workItem from="1575734350056" duration="549000" />
     </task>
     <servers />
   </component>
